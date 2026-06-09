@@ -1,0 +1,26 @@
+/**
+ * Cube Financial Group — design tokens
+ * Source: src/app/globals.css + src/config/brand.ts
+ */
+:root {
+  --cube-navy: #0a192f;
+  --cube-gold: #d4af37;
+  --cube-sapphire: #1e3a8a;
+  --cube-neutral: #f4f6f9;
+  --cube-body: #2d3748;
+  --background: var(--cube-neutral);
+  --foreground: var(--cube-navy);
+  --font-body: "Heebo", Arial, sans-serif;
+  --font-nav: "Assistant", Arial, sans-serif;
+}
+
+/* Tailwind utility → token mapping (for handoff) */
+/*
+  bg-cube-navy      → var(--cube-navy)
+  bg-cube-gold      → var(--cube-gold)
+  bg-cube-sapphire  → var(--cube-sapphire)
+  bg-cube-neutral   → var(--cube-neutral)
+  text-cube-body    → var(--cube-body)
+  text-cube-navy    → var(--cube-navy)
+  border-cube-gold  → var(--cube-gold)
+*/

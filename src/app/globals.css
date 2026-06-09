@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --cube-navy: #0a192f;
+  --cube-gold: #d4af37;
+  --cube-sapphire: #1e3a8a;
+  --cube-neutral: #f4f6f9;
+  --cube-body: #2d3748;
+  --background: var(--cube-neutral);
+  --foreground: var(--cube-navy);
+}
+
+@theme inline {
+  --color-cube-navy: var(--cube-navy);
+  --color-cube-gold: var(--cube-gold);
+  --color-cube-sapphire: var(--cube-sapphire);
+  --color-cube-neutral: var(--cube-neutral);
+  --color-cube-body: var(--cube-body);
+  --font-sans: var(--font-heebo);
+  --font-nav: var(--font-assistant);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-heebo), Arial, sans-serif;
+}
+
+@keyframes partners-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-partners-scroll {
+  animation: partners-scroll 35s linear infinite;
+}
+
+@keyframes partners-scroll-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+[dir="rtl"] .animate-partners-scroll {
+  animation-name: partners-scroll-rtl;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-partners-scroll {
+    animation: none;
+  }
+}

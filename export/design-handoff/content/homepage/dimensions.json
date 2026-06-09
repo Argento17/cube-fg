@@ -1,0 +1,36 @@
+{
+  "title": "ארבעה ממדים. מסגרת ייעוץ אחת.",
+  "subtitle": "Cube Financial Group",
+  "closing": "ארבעה ממדים. מסגרת ייעוץ אחת. Cube Financial Group.",
+  "items": [
+    {
+      "id": "financial",
+      "number": "01",
+      "title": "פיננסים",
+      "description": "תכנון הון, חיסכון והשקעות בהתאמה למטרות האישיות והמשפחתיות.",
+      "href": "/solutions#financial"
+    },
+    {
+      "id": "pension",
+      "number": "02",
+      "title": "פנסיה",
+      "description": "צבירה, הפקדות ומסלולים — בניית הכנסה עתידית מסודרת.",
+      "href": "/solutions#pension"
+    },
+    {
+      "id": "retirement",
+      "number": "03",
+      "title": "פרישה",
+      "description": "מעבר מובנה לגיל השלישי, קיבוע זכויות ותכנון הכנסה בפרישה.",
+      "href": "/solutions#retirement"
+    },
+    {
+      "id": "insurance",
+      "number": "04",
+      "title": "ביטוח",
+      "description": "הגנה אישית ומשפחתית — במסגרת בר חיים ביטוחים.",
+      "href": "/solutions#insurance",
+      "insuranceArm": true
+    }
+  ]
+}

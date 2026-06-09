@@ -1,0 +1,46 @@
+{
+  "project": "Cube Financial Group",
+  "lang": "he",
+  "dir": "rtl",
+  "fonts": {
+    "body": "Heebo",
+    "nav": "Assistant"
+  },
+  "routes": [
+    { "path": "/", "page": "src/app/page.tsx", "sections": ["hero", "founder", "scenarios", "dimensions", "trust", "process", "meeting-cta"] },
+    { "path": "/about", "page": "src/app/about/page.tsx" },
+    { "path": "/solutions", "page": "src/app/solutions/page.tsx" },
+    { "path": "/solutions/[slug]", "page": "src/app/solutions/[slug]/page.tsx", "template": "src/components/solutions/SolutionPageTemplate.tsx" },
+    { "path": "/process", "page": "src/app/process/page.tsx" },
+    { "path": "/meeting", "page": "src/app/meeting/page.tsx" },
+    { "path": "/contact", "page": "src/app/contact/page.tsx" }
+  ],
+  "layout": {
+    "root": "src/app/layout.tsx",
+    "header": "src/components/layout/SiteHeader.tsx",
+    "footer": "src/components/layout/SiteFooter.tsx",
+    "brand": "src/components/layout/BrandLockup.tsx",
+    "globals": "src/app/globals.css",
+    "brandConfig": "src/config/brand.ts"
+  },
+  "homepageComponents": {
+    "hero": "src/components/home/HeroVideo.tsx",
+    "founder": "src/components/home/FounderSection.tsx",
+    "scenarios": "src/components/home/ClientScenarios.tsx",
+    "dimensions": "src/components/home/FourDimensions.tsx",
+    "trust": "src/components/home/TrustFramework.tsx",
+    "process": "src/components/home/ProcessSection.tsx",
+    "meetingCta": "src/components/home/MeetingCtaBand.tsx"
+  },
+  "ui": {
+    "button": "src/components/ui/Button.tsx",
+    "sectionHeading": "src/components/ui/SectionHeading.tsx",
+    "faq": "src/components/ui/FaqAccordion.tsx"
+  },
+  "contentFiles": {
+    "site": "content/site.json",
+    "navigation": "content/navigation.json",
+    "homepage": "content/homepage/*.json",
+    "solutions": "content/solutions.json"
+  }
+}

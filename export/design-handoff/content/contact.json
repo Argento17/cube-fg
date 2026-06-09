@@ -1,0 +1,16 @@
+{
+  "title": "צור קשר",
+  "seo": {
+    "title": "צור קשר | Cube Financial Group",
+    "description": "יצירת קשר עם Cube Financial Group — טלפון, אימייל, וואטסאפ וטופס פנייה."
+  },
+  "intro": "נשמח לשמוע מכם. לתיאום פגישת ייעוץ מומלץ להשתמש בעמוד תיאום הפגישה.",
+  "meetingLink": { "label": "לתיאום פגישת ייעוץ", "href": "/meeting" },
+  "form": {
+    "name": "שם מלא",
+    "phone": "טלפון",
+    "email": "אימייל",
+    "message": "הודעה",
+    "submit": "שליחה"
+  }
+}

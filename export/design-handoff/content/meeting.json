@@ -1,0 +1,40 @@
+{
+  "title": "תיאום פגישת ייעוץ אישית",
+  "subtitle": "פגישת היכרות · ללא התחייבות · דיסקרטיות מלאה",
+  "form": {
+    "name": "שם מלא",
+    "phone": "טלפון",
+    "email": "אימייל",
+    "subject": "נושא הפגישה",
+    "preferredTime": "מועד מועדף",
+    "notes": "הערות",
+    "submit": "שליחת בקשה",
+    "subjects": [
+      { "value": "general", "label": "ייעוץ כללי" },
+      { "value": "financial", "label": "פיננסים והשקעות" },
+      { "value": "pension", "label": "פנסיה וחיסכון" },
+      { "value": "retirement", "label": "פרישה וגיל שלישי" },
+      { "value": "insurance", "label": "ביטוח (בר חיים ביטוחים)" },
+      { "value": "other", "label": "אחר" }
+    ],
+    "timeOptions": [
+      { "value": "morning", "label": "בוקר" },
+      { "value": "noon", "label": "צהריים" },
+      { "value": "evening", "label": "ערב" }
+    ]
+  },
+  "advisor": {
+    "name": "אריאל בר חיים",
+    "title": "מייסד ומנהל מקצועי, Cube Financial Group"
+  },
+  "whatHappensNext": {
+    "title": "מה קורה אחרי?",
+    "steps": [
+      "ניצור איתכם קשר לתיאום מועד שנוח",
+      "בפגישה נמפה את הצרכים והמטרות — ללא התחייבות",
+      "בהמשך, רק אם תרצו — נבנה תוכנית מותאמת ונלווה אתכם"
+    ]
+  },
+  "trustCopy": "Cube Financial Group — ייעוץ פיננסי, פנסיוני וביטוחי אישי. מפצחים את המורכבות.",
+  "alternateContact": { "label": "מעדיפים לפנות בדרך אחרת?", "href": "/contact" }
+}

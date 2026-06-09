@@ -1,0 +1,33 @@
+{
+  "main": [
+    { "label": "בית", "href": "/" },
+    { "label": "אודות", "href": "/about" },
+    {
+      "label": "פתרונות",
+      "href": "/solutions",
+      "children": [
+        { "label": "מוצרים פנסיוניים", "href": "/solutions#pension" },
+        { "label": "מוצרים פיננסיים", "href": "/solutions#financial" },
+        { "label": "גיל שלישי ופרישה", "href": "/solutions#retirement" },
+        { "label": "ביטוח", "href": "/solutions#insurance" }
+      ]
+    },
+    { "label": "תהליך העבודה", "href": "/process" },
+    { "label": "צור קשר", "href": "/contact" }
+  ],
+  "cta": { "label": "תיאום פגישה", "href": "/meeting" },
+  "footer": {
+    "company": [
+      { "label": "אודות", "href": "/about" },
+      { "label": "תהליך העבודה", "href": "/process" },
+      { "label": "תיאום פגישה", "href": "/meeting" },
+      { "label": "צור קשר", "href": "/contact" }
+    ],
+    "legal": [
+      { "label": "מדיניות פרטיות", "href": "#" },
+      { "label": "גילוי נאות", "href": "#" },
+      { "label": "הצהרת נגישות", "href": "#" }
+    ],
+    "insuranceNote": "פתרונות ביטוח במסגרת בר חיים ביטוחים, חטיבת הביטוח של Cube Financial Group."
+  }
+}

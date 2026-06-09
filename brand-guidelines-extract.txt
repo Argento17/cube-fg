@@ -1,0 +1,141 @@
+--- PAGE 1 ---
+1. Brand Philosophy & Positioning
+Cube Financial Group operates as an elite boutique wealth management firm and family office advisory. The brand serves ultra-high-
+net-worth individuals, multi-generational families, business owners, and corporate executives who demand sophisticated structural
+clarity over complex financial ecosystems.
+Our core positioning is rooted in the theme: "Solving Complexity" (מפצחים את המורכבהמורכבות מפצחים את המורכבאת  את המורכבות). Wealth is multi-dimensional, consisting
+of  tax  structures,  retirement  horizons,  asset  allocations,  and  generational  transitions.  The  cube  represents  this  structured
+dimensionality—stable, highly organized, and logically complete.
+CORE BRAND ATTRIBUTES
+ATTRIBUTE BRAND EXECUTION STRATEGY
+Premium & Sophisticated We employ classic editorial typography, generous white space, and restrained deep corporate
+tones. We reject aggressive fintech aesthetics.
+Trustworthy & Stable Visual layouts emphasize structural balance, heavy grid alignment, and symmetric geometry to
+project multi-generational permanence.
+Intelligent & Analytical All reporting assets prioritize highly legible tables, math-clean data layouts, and clear
+information hierarchies.
+CUBE FINANCIAL GROUP
+BRAND GUIDELINES & SYSTEM IDENTITY
+Document Version: 1.0
+Date: June 2026
+Classification: Confidential Corporate Asset
+Author: Brand Strategy & Design Architecture Team --- PAGE 2 ---
+2. Master Logo System & Clear Space
+The approved Cube Financial Group logo is the definitive, unalterable visual signature of the brand. The 3-
+dimensional geometric cube represents organized capital, integrated asset layers, and structural alignment. This
+symbol must always be treated as a single cohesive unit.
+CLEAR SPACE RULE
+To preserve visual integrity and high-end positioning, the master logo requires strict isolation from competing
+elements. The absolute minimum clear space surrounding all sides of the logo must equal the dimension of exactly
+two rows of the cube pattern, denoted as X.
+Mandatory Isolation Formula
+Let  Hcube be  the  total  height  of  the  cube  symbol.  The  required  clear  space  boundary  margin  Mcs is
+mathematically defined as:
+Mcs = 0.25 × Hcube
+MINIMUM SIZING
+APPLICATION MEDIUMMINIMUM ALLOWABLE WIDTHRESOLUTION REQUIREMENT
+Digital Assets 180 pixels wide 72 dpi / @2x for Retina screen scales
+Print Collateral 35 millimeters wide 300 dpi Vector output (PDF/EPS format only)
+CUBE FINANCIAL GROUP • BRAND GUIDELINES 2--- PAGE 3 ---
+3. Color Palette Specification
+The corporate color system relies on high-contrast, deeply saturated executive tones supported by muted metallic
+accents  and  precise  neutrals.  Bright  primary  or  neon  colors  are  strictly  banned  to  prevent  a  retail  fintech
+appearance.
+Deep Corporate Navy
+HEX: #0A192F
+RGB: 10, 25, 47
+CMYK: 100, 85, 45, 55 
+Metallic Classic Gold
+HEX: #D4AF37
+RGB: 212, 175, 55
+CMYK: 20, 30, 85, 10 
+Sapphire Supporting Blue
+HEX: #1E3A8A
+RGB: 30, 58, 138
+CMYK: 95, 80, 10, 5 
+Warm Neutral Light Grey
+HEX: #F4F6F9
+RGB: 244, 246, 249
+CMYK: 3, 2, 1, 0 
+APPLICATION RATIOS
+To maintain a high-end corporate presentation, color distribution across any single layout must strictly match the
+following target proportional weights:
+COLOR TIER TARGET VISUAL AREA
+WEIGHT (%) PRIMARY APPLICATION USE CASES
+Background White /
+Neutral Light 65% to 75% Area Document fields, letterhead canvases, website
+structural negative spaces.
+Deep Corporate Navy20% to 25% Area Primary text blocks, executive headers, solid
+presentation slide backgrounds.
+Metallic Classic Gold2% to 5% Area Delicate structural divider rules, focal key callouts,
+subtle line iconography accents.
+CUBE FINANCIAL GROUP • BRAND GUIDELINES 3--- PAGE 4 ---
+4. Typography & Font Hierarchy
+The typography system is designed for absolute structural stability and perfect cross-platform editorial readability.
+Fonts must never be substituted unless entirely unsupported by the native system architecture.
+LATIN/ENGLISH TYPOGRAPHY SYSTEM
+HIERARCHY LEVEL FONT FAMILY
+SPECIFIED SIZE / WEIGHT TRACKING & FORMATTING
+Primary Headlines Trajan Pro / Times New
+Roman
+18pt – 24pt /
+Regular
+Tracking: +100 / Uppercase or
+Sentence case
+Sub-headers (H2/H3 את המורכבות)Arial / Helvetica 12pt – 14pt / Bold Tracking: +50 / All Caps / Gold
+color fill
+Body Copy Text Arial / Times New Roman10pt – 11pt /
+Regular
+Line Height: 1.6 / Color:
+#2D3748
+HEBREW TYPOGRAPHY SYSTEM
+HIERARCHY LEVEL FONT FAMILY
+SPECIFIED SIZE / WEIGHT TRACKING & FORMATTING
+Primary Headlines Heebo / Assistant 20pt – 26pt / Bold Clean, un-serifed high-stability
+weight
+Sub-headers Heebo / Assistant 13pt – 15pt /
+Medium
+Color: #0A192F or #D4AF37
+accent fill
+Body Copy Text Heebo / Assistant 10pt – 10.5pt / Light
+or Regular
+Line Height: 1.55 / High screen
+optimization
+CUBE FINANCIAL GROUP • BRAND GUIDELINES 4--- PAGE 5 ---
+5. Correct and Incorrect System Usage
+Consistency is key to maintaining a premium brand identity. The following examples outline mandatory design
+boundaries. Any deviation dilutes the firm's reputation for stability and institutional precision.
+MANDATORY CORRECT EXECUTIONS
+✔ Rule 1: Monochromatic and Vector Alignment
+The logo must always sit flat on light ivory, pure white, or solid deep navy backgrounds. All typographic
+elements must run perfectly parallel to horizontal document margins.
+✔ Rule 2: Complete Symbol Cohesion
+The cube symbol must remain perfectly intact as a single block. The layout must match the original asset
+dimensions without modification.
+PROHIBITED VIOLATIONS
+✘ Violation 1: Component Fragmentation
+Never detach, offset, floating-animate, or pull out individual smaller squares from the primary cube cluster.
+The cube represents structural unity; fracturing it breaks the brand code.
+✘ Violation 2: Extraneous Financial Imagery
+Never introduce secondary industry icons. The use of umbrellas (insurance), shields (security), compound
+charts, arrows, coins, houses, or traditional scales of justice is strictly banned. The cube is the brand.
+✘ Violation 3: Unauthorized Distortions
+CUBE FINANCIAL GROUP • BRAND GUIDELINES 5--- PAGE 6 ---
+Do not skew, stretch, rotate, add heavy dropshadows, or apply primary/neon color gradients to the cube
+surfaces or fonts.
+CUBE FINANCIAL GROUP • BRAND GUIDELINES 6--- PAGE 7 ---
+6. Corporate Tone of V oice
+The Cube Financial Group voice is authoritative, reassuring, measured, and highly intellectual. We speak with the
+discretion of a private family office and the technical clarity of institutional asset managers.
+COMMUNICATION PRINCIPLES
+WE ARE WE ARE NOT PRACTICAL WRITING EXAMPLE
+Clear & Certain Simplistic or Patronizing "We restructure capital layers to optimize
+generational tax transitions."
+Conservative & Steady Hyped or Fintech-Aggressive"Our focus is long-term capital preservation
+and structured wealth progression."
+Direct & Professional Aloof or Overly Academic "We reduce systemic complexity into clean,
+actionable, compliant frameworks."
+SLOGAN PRESENTATION SYSTEMS
+The Hebrew slogan מפצחים את המורכבהמורכבות מפצחים את המורכבאת  (Solving Complexity) must always sit directly below the primary English
+wordmark in a smaller, clean weight, aligned to the vertical center axis of the asset layout.
+CUBE FINANCIAL GROUP • BRAND GUIDELINES 7

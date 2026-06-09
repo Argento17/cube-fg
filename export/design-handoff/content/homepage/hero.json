@@ -1,0 +1,11 @@
+{
+  "headline": "תכנון פיננסי, פנסיוני וביטוחי תחת קורת גג אחת",
+  "brand": "קיוב קבוצת תכנון פיננסי",
+  "tagline": "מפצחים את המורכבות",
+  "primaryCta": { "label": "לתיאום פגישת ייעוץ", "href": "/meeting" },
+  "secondaryCta": { "label": "הפתרונות שלנו", "href": "/solutions" },
+  "video": {
+    "src": "/20256026-uhd_3840_2160_24fps.mp4",
+    "poster": ""
+  }
+}

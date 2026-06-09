@@ -1,0 +1,18 @@
+{
+  "name": "Cube Financial Group",
+  "tagline": "מפצחים את המורכבות",
+  "insuranceArm": "בר חיים ביטוחים",
+  "seo": {
+    "defaultTitle": "Cube Financial Group | תכנון פיננסי ופנסיוני",
+    "defaultDescription": "ייעוץ פיננסי, פנסיוני וביטוחי אישי תחת קורת גג אחת. Cube Financial Group — מפצחים את המורכבות."
+  },
+  "contact": {
+    "name": "אריאל בר-חיים",
+    "role": "כלכלן, מתכנן פיננסי, סוכן ביטוח פנסיוני",
+    "phone": "054-7686737",
+    "email": "ariel@gal-almagor.co.il",
+    "whatsapp": "https://wa.me/972547686737",
+    "address": "דרך בר יהודה 147, נשר",
+    "mapEmbed": ""
+  }
+}

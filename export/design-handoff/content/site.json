@@ -1,0 +1,16 @@
+{
+  "name": "Cube Financial Group",
+  "tagline": "מפצחים את המורכבות",
+  "insuranceArm": "בר חיים ביטוחים",
+  "seo": {
+    "defaultTitle": "Cube Financial Group | תכנון פיננסי ופנסיוני",
+    "defaultDescription": "ייעוץ פיננסי, פנסיוני וביטוחי אישי תחת קורת גג אחת. Cube Financial Group — מפצחים את המורכבות."
+  },
+  "contact": {
+    "phone": "000-0000000",
+    "email": "info@cube-financial.co.il",
+    "whatsapp": "https://wa.me/972000000000",
+    "address": "כתובת — יתעדכן",
+    "mapEmbed": ""
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "השותפים שלנו",
+  "partners": [
+    { "id": "harel", "name": "הראל", "logo": "/partners/harel.png" },
+    { "id": "phoenix", "name": "הפניקס", "logo": "/partners/The_Phoenix_Holdings_Logo.svg.png" },
+    { "id": "menorah", "name": "מנורה", "logo": "/partners/מנורה_מבטחים_לוגו.svg.png" },
+    { "id": "migdal", "name": "מגדל", "logo": "/partners/Migdal-190x190.png" },
+    { "id": "hachshara", "name": "הכשרה", "logo": "/partners/hachshara.png" },
+    { "id": "meitav", "name": "מיטב דש", "logo": "/partners/meitav-dash.png" },
+    { "id": "more", "name": "מור פנסיה", "logo": "/partners/more.png" },
+    { "id": "ibi", "name": "IBI", "logo": "/partners/IBILogo2021.svg.png" },
+    { "id": "altshuler", "name": "אלטשולר שחם", "logo": "/partners/altshuler.png" },
+    { "id": "clal", "name": "כלל", "logo": "/partners/לוגו_כלל_ביטוח.svg.png" },
+    { "id": "analyst", "name": "אנליסט", "logo": "/partners/analyst-logo.svg" },
+    { "id": "yelin-lapidot", "name": "ילין לפידות", "logo": "/partners/YalinLapidotlogo.png" }
+  ]
+}
