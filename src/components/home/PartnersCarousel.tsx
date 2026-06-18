@@ -8,7 +8,7 @@ type Partner = {
   logo: string;
 };
 
-const logoHeight = "h-16 md:h-20";
+const logoHeight = "h-14 md:h-20";
 
 /** Subtle scale tweaks when a mark reads too large/small at the shared height. */
 const partnerScale: Record<string, string> = {
@@ -32,7 +32,7 @@ function PartnerLogo({ partner }: { partner: Partner }) {
           alt={partner.name}
           width={280}
           height={112}
-          className="h-48 w-auto object-contain object-center opacity-95 transition-opacity hover:opacity-100 md:h-56"
+          className="h-40 w-auto object-contain object-center opacity-95 transition-opacity hover:opacity-100 md:h-56"
           loading="lazy"
           decoding="async"
         />
@@ -72,7 +72,7 @@ export function PartnersCarousel({
   }, []);
 
   return (
-    <section className="border-y border-cube-navy/10 bg-cube-neutral py-16 md:py-20">
+    <section className="border-y border-cube-navy/10 bg-cube-neutral py-12 sm:py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <h2 className="text-center text-2xl font-bold text-cube-navy md:text-3xl">
           {title}
@@ -88,7 +88,7 @@ export function PartnersCarousel({
         }}
       >
         <div
-          className={`flex w-max items-center gap-16 px-8 md:px-10 ${
+          className={`flex w-max items-center gap-12 px-6 sm:gap-16 sm:px-8 md:px-10 ${
             paused ? "" : "animate-partners-scroll"
           }`}
           aria-label={title}
@@ -96,7 +96,7 @@ export function PartnersCarousel({
           {doubled.map((partner, i) => (
             <div
               key={`${partner.id}-${i}`}
-              className="flex h-20 w-56 shrink-0 items-center justify-center md:h-24"
+              className="flex h-16 w-44 shrink-0 items-center justify-center sm:h-20 sm:w-56 md:h-24"
             >
               <PartnerLogo partner={partner} />
             </div>

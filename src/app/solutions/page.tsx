@@ -12,15 +12,15 @@ export const metadata: Metadata = {
 export default function SolutionsPage() {
   return (
     <>
-      <section className="bg-cube-neutral py-16 md:py-20">
+      <section className="bg-cube-neutral py-12 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <h1 className="text-4xl font-bold text-cube-navy">{data.pageTitle}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-cube-body">{data.intro}</p>
+          <h1 className="text-3xl font-bold text-cube-navy sm:text-4xl">{data.pageTitle}</h1>
+          <p className="mt-3 max-w-2xl text-base text-cube-body sm:mt-4 sm:text-lg">{data.intro}</p>
         </div>
       </section>
 
-      <section className="pb-20">
-        <div className="mx-auto max-w-6xl space-y-16 px-4 md:px-6">
+      <section className="pb-12 sm:pb-20">
+        <div className="mx-auto max-w-6xl space-y-12 px-4 sm:space-y-16 md:px-6">
           {data.categories.map((category) => {
             const items = data.solutions.filter((s) => s.categoryId === category.id);
             return (
@@ -35,7 +35,7 @@ export default function SolutionsPage() {
                     <li key={solution.slug}>
                       <Link
                         href={`/solutions/${solution.slug}`}
-                        className="block rounded-sm border border-cube-navy/10 bg-white px-4 py-3 text-cube-navy transition-colors hover:border-cube-gold hover:bg-cube-neutral"
+                        className="block min-h-11 rounded-sm border border-cube-navy/10 bg-white px-4 py-3 text-cube-navy transition-colors hover:border-cube-gold hover:bg-cube-neutral"
                       >
                         {solution.title}
                       </Link>

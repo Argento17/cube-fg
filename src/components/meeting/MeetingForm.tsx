@@ -51,7 +51,7 @@ function MeetingFormInner({ content }: { content: MeetingContent }) {
           name="subject"
           required
           defaultValue={defaultSubject}
-          className="w-full rounded-sm border border-cube-navy/20 bg-white px-3 py-2.5 text-cube-navy"
+          className="w-full min-h-11 rounded-sm border border-cube-navy/20 bg-white px-3 py-3 text-base text-cube-navy sm:py-2.5 sm:text-sm"
         >
           <option value="">בחרו נושא</option>
           {content.form.subjects.map((s) => (
@@ -68,7 +68,7 @@ function MeetingFormInner({ content }: { content: MeetingContent }) {
         <select
           id="time"
           name="time"
-          className="w-full rounded-sm border border-cube-navy/20 bg-white px-3 py-2.5 text-cube-navy"
+          className="w-full min-h-11 rounded-sm border border-cube-navy/20 bg-white px-3 py-3 text-base text-cube-navy sm:py-2.5 sm:text-sm"
         >
           <option value="">בחרו מועד</option>
           {content.form.timeOptions.map((t) => (
@@ -86,7 +86,7 @@ function MeetingFormInner({ content }: { content: MeetingContent }) {
           id="notes"
           name="notes"
           rows={4}
-          className="w-full rounded-sm border border-cube-navy/20 bg-white px-3 py-2.5 text-cube-navy"
+          className="w-full min-h-11 rounded-sm border border-cube-navy/20 bg-white px-3 py-3 text-base text-cube-navy sm:py-2.5 sm:text-sm"
         />
       </div>
       <Button type="submit" variant="primary" className="w-full">
@@ -117,7 +117,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="w-full rounded-sm border border-cube-navy/20 bg-white px-3 py-2.5 text-cube-navy"
+        className="w-full min-h-11 rounded-sm border border-cube-navy/20 bg-white px-3 py-3 text-base text-cube-navy sm:py-2.5 sm:text-sm"
       />
     </div>
   );

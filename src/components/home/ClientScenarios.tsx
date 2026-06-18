@@ -28,7 +28,7 @@ function ScenarioGrid({
       {items.map((item, index) => (
         <article
           key={item.id}
-          className="flex flex-col rounded-sm border border-cube-navy/10 bg-cube-neutral p-6 shadow-sm"
+          className="flex flex-col rounded-sm border border-cube-navy/10 bg-cube-neutral p-5 shadow-sm sm:p-6"
         >
           <span className="text-sm font-semibold text-cube-gold">
             {String(startIndex + index + 1).padStart(2, "0")}
@@ -72,13 +72,13 @@ export function ClientScenarios({
   insurance?: InsuranceBlock;
 }) {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-white py-14 sm:py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <SectionHeading title={title} subtitle={subtitle} />
         <ScenarioGrid items={items} />
 
         {insurance && (
-          <div className="mt-20 border-t border-cube-navy/10 pt-20">
+          <div className="mt-14 border-t border-cube-navy/10 pt-14 sm:mt-20 sm:pt-20">
             <SectionHeading title={insurance.title} subtitle={insurance.subtitle} />
             <ScenarioGrid items={insurance.items} startIndex={items.length} />
           </div>

@@ -10,28 +10,28 @@ export function SolutionPageTemplate({ solution }: { solution: Solution }) {
 
   return (
     <>
-      <section className="bg-cube-navy py-16 md:py-20">
+      <section className="bg-cube-navy py-12 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <nav className="mb-4 text-sm text-white/70" aria-label="מיקום">
+          <nav className="mb-4 text-xs text-white/70 sm:text-sm" aria-label="מיקום">
             <Link href="/solutions" className="hover:text-white">
               פתרונות
             </Link>
-            <span className="mx-2">/</span>
+            <span className="mx-1.5 sm:mx-2">/</span>
             <span>{category?.title}</span>
-            <span className="mx-2">/</span>
+            <span className="mx-1.5 sm:mx-2">/</span>
             <span className="text-white">{solution.title}</span>
           </nav>
-          <h1 className="text-3xl font-bold text-white md:text-4xl">{solution.title}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-white/85">{solution.hero.intro}</p>
-          <div className="mt-8">
-            <Button href={meetingHref} variant="primary">
+          <h1 className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">{solution.title}</h1>
+          <p className="mt-3 max-w-2xl text-base text-white/85 sm:mt-4 sm:text-lg">{solution.hero.intro}</p>
+          <div className="mt-6 sm:mt-8">
+            <Button href={meetingHref} variant="primary" className="w-full sm:w-auto">
               לתיאום פגישת ייעוץ
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="py-14 md:py-20">
+      <section className="py-10 sm:py-14 md:py-20">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <h2 className="text-2xl font-bold text-cube-navy">מהות הפתרון</h2>
           <p className="mt-4 leading-relaxed text-cube-body">{solution.whatIs}</p>
@@ -68,11 +68,11 @@ export function SolutionPageTemplate({ solution }: { solution: Solution }) {
         </div>
       </section>
 
-      <section className="bg-cube-neutral py-14">
+      <section className="bg-cube-neutral py-10 sm:py-14">
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
-          <h2 className="text-xl font-bold text-cube-navy">רוצים לדבר על {solution.title}?</h2>
-          <div className="mt-6">
-            <Button href={meetingHref} variant="secondary">
+          <h2 className="text-lg font-bold text-cube-navy sm:text-xl">רוצים לדבר על {solution.title}?</h2>
+          <div className="mt-5 sm:mt-6">
+            <Button href={meetingHref} variant="secondary" className="w-full sm:w-auto">
               לתיאום פגישת ייעוץ
             </Button>
           </div>

@@ -16,10 +16,10 @@ type FounderContent = {
 
 export function FounderSection({ content }: { content: FounderContent }) {
   return (
-    <section className="bg-cube-neutral py-20 md:py-28" id="founder">
+    <section className="bg-cube-neutral py-14 sm:py-20 md:py-28" id="founder">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-5">
+        <div className="grid items-start gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="mx-auto w-full max-w-md lg:col-span-5 lg:mx-0">
             <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-sm border border-cube-navy/15 bg-cube-navy/5">
               <Image
                 src={content.photo}
@@ -35,7 +35,7 @@ export function FounderSection({ content }: { content: FounderContent }) {
 
           <div className="lg:col-span-7">
             <p className="mb-2 text-sm font-medium text-cube-gold">{content.eyebrow}</p>
-            <h2 className="text-3xl font-bold text-cube-navy md:text-4xl">{content.name}</h2>
+            <h2 className="text-2xl font-bold text-cube-navy sm:text-3xl md:text-4xl">{content.name}</h2>
             <p className="mt-1 text-lg text-cube-sapphire">{content.title}</p>
 
             <p className="mt-6 leading-relaxed text-cube-body">{content.story}</p>
@@ -68,11 +68,11 @@ export function FounderSection({ content }: { content: FounderContent }) {
               <p className="mt-4 text-sm text-cube-body/80">{content.insuranceNote}</p>
             )}
 
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button href={content.ctas.about.href} variant="secondary">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
+              <Button href={content.ctas.about.href} variant="secondary" className="w-full sm:w-auto">
                 {content.ctas.about.label}
               </Button>
-              <Button href={content.ctas.meeting.href} variant="primary">
+              <Button href={content.ctas.meeting.href} variant="primary" className="w-full sm:w-auto">
                 {content.ctas.meeting.label}
               </Button>
             </div>

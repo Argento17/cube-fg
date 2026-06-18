@@ -58,19 +58,19 @@ export function SolutionsShowcase({
   items: SolutionCard[];
 }) {
   return (
-    <section className="bg-white py-20 md:py-28" id="solutions">
+    <section className="bg-white py-14 sm:py-20 md:py-28" id="solutions">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <h2 className="text-center text-3xl font-extrabold text-cube-navy md:text-4xl">
+        <h2 className="text-center text-2xl font-extrabold text-cube-navy sm:text-3xl md:text-4xl">
           {title}
         </h2>
-        <div className="mt-3 mx-auto h-0.5 w-16 bg-cube-gold" />
+        <div className="mx-auto mt-3 h-0.5 w-16 bg-cube-gold" />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           {items.map((item) => (
             <Link
               key={item.id}
               href={item.href}
-              className="group flex flex-col rounded-sm border border-cube-navy/10 bg-cube-neutral p-8 transition-all duration-300 hover:border-cube-gold/40 hover:shadow-lg"
+              className="group flex flex-col rounded-sm border border-cube-navy/10 bg-cube-neutral p-6 transition-all duration-300 hover:border-cube-gold/40 hover:shadow-lg sm:p-8"
             >
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-sm border border-cube-navy/8 bg-white">
                 <CardMark variant={item.id} />

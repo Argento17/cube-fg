@@ -90,12 +90,11 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
       className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         scrolled
           ? "border-cube-navy/15 bg-cube-neutral/98 py-2 shadow-sm backdrop-blur-md"
-          : "border-cube-navy/10 bg-cube-neutral/95 py-3 backdrop-blur-md md:py-4"
-      }`}
+          : "border-cube-navy/10 bg-cube-neutral/95 py-2.5 backdrop-blur-md sm:py-3 md:py-4"
+      } relative`}
     >
-      <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 md:gap-6 md:px-6">
-        {/* RTL start (visual right): nav utilities + CTA */}
-        <div className="flex shrink-0 items-center gap-3 md:gap-4">
+      <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 sm:gap-4 md:gap-6 md:px-6">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3 md:gap-4">
           {contactItem && (
             <Link
               href={contactItem.href}
@@ -107,13 +106,13 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
           <Button
             href={cta.href}
             variant="outlineGold"
-            className="hidden font-[family-name:var(--font-assistant)] text-[15px] font-bold tracking-wide sm:inline-flex px-4 py-2.5 md:text-base md:px-5"
+            className="hidden font-[family-name:var(--font-assistant)] text-[15px] font-bold tracking-wide sm:inline-flex md:text-base"
           >
             {cta.label}
           </Button>
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-sm border border-cube-navy/20 lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-sm border border-cube-navy/20 lg:hidden"
             aria-expanded={open}
             aria-label={open ? "סגירת תפריט" : "פתיחת תפריט"}
             onClick={() => setOpen(!open)}
@@ -144,7 +143,6 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
           </button>
         </div>
 
-        {/* Center navigation */}
         <nav
           className="hidden flex-1 items-center justify-center gap-6 lg:flex xl:gap-8"
           aria-label="ניווט ראשי"
@@ -152,14 +150,18 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
           <NavItems items={mainNav} />
         </nav>
 
-        {/* RTL end (visual left): prominent brand */}
-        <div className="ms-auto shrink-0 lg:min-w-[280px] xl:min-w-[320px]">
-          <BrandLockup variant="icon-wordmark" compact={scrolled} />
+        <div className="ms-auto min-w-0 shrink lg:min-w-[280px] xl:min-w-[320px]">
+          <BrandLockup
+            variant="icon-wordmark"
+            compact={scrolled}
+            className="hidden sm:flex"
+          />
+          <BrandLockup variant="icon-only" compact className="sm:hidden" />
         </div>
       </div>
 
       {open && (
-        <div className="border-t border-cube-navy/10 bg-white lg:hidden">
+        <div className="absolute inset-x-0 top-full z-40 max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-t border-cube-navy/10 bg-white lg:hidden">
           <div className="border-b border-cube-navy/5 bg-cube-neutral/50 px-4 py-5">
             <BrandLockup variant="icon-wordmark" compact={false} />
           </div>
@@ -168,7 +170,7 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
               <div key={item.href}>
                 <Link
                   href={item.href}
-                  className="block py-2.5 font-[family-name:var(--font-assistant)] text-base font-semibold text-cube-navy"
+                  className="block min-h-11 py-2.5 font-[family-name:var(--font-assistant)] text-base font-semibold text-cube-navy"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
@@ -177,7 +179,7 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
                   <Link
                     key={child.href}
                     href={child.href}
-                    className="block py-2 pe-4 font-[family-name:var(--font-assistant)] text-[15px] font-medium text-cube-body"
+                    className="block min-h-10 py-2 pe-4 font-[family-name:var(--font-assistant)] text-[15px] font-medium text-cube-body"
                     onClick={() => setOpen(false)}
                   >
                     {child.label}
@@ -189,6 +191,11 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
               <Button href={cta.href} variant="outlineGold" className="w-full">
                 {cta.label}
               </Button>
+              {contactItem && (
+                <Button href={contactItem.href} variant="secondary" className="w-full">
+                  {contactItem.label}
+                </Button>
+              )}
             </div>
           </nav>
         </div>

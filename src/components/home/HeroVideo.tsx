@@ -20,7 +20,7 @@ export function HeroVideo({ content }: { content: HeroContent }) {
       : undefined;
 
   return (
-    <section className="relative flex min-h-[85vh] items-center overflow-hidden">
+    <section className="relative flex min-h-[72vh] items-center overflow-hidden sm:min-h-[80vh] md:min-h-[85vh]">
       <div className="absolute inset-0 bg-cube-navy" aria-hidden>
         {/* Navy fallback: mobile + reduced motion (hidden on desktop when motion OK) */}
         <div
@@ -48,19 +48,19 @@ export function HeroVideo({ content }: { content: HeroContent }) {
         />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-24 md:px-6">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-16 sm:py-20 md:px-6 md:py-24">
         <div className="max-w-2xl">
-          <h1 className="text-3xl font-bold leading-tight text-white md:text-5xl">
+          <h1 className="text-[1.75rem] font-bold leading-tight text-white sm:text-3xl md:text-5xl">
             {content.headline}
           </h1>
           <div className="mt-4 h-0.5 w-16 bg-cube-gold" />
-          <p className="mt-6 text-lg font-medium text-white">{content.brand}</p>
-          <p className="mt-1 text-base text-white/80">{content.tagline}</p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Button href={content.primaryCta.href} variant="primary">
+          <p className="mt-5 text-base font-medium text-white sm:mt-6 sm:text-lg">{content.brand}</p>
+          <p className="mt-1 text-sm text-white/80 sm:text-base">{content.tagline}</p>
+          <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
+            <Button href={content.primaryCta.href} variant="primary" className="w-full sm:w-auto">
               {content.primaryCta.label}
             </Button>
-            <Button href={content.secondaryCta.href} variant="outline">
+            <Button href={content.secondaryCta.href} variant="outline" className="w-full sm:w-auto">
               {content.secondaryCta.label}
             </Button>
           </div>

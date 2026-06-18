@@ -14,7 +14,7 @@ export function SiteFooter({ company, legal, insuranceNote }: FooterProps) {
 
   return (
     <footer className="border-t border-cube-navy/10 bg-cube-navy text-white">
-      <div className="relative overflow-hidden border-b border-white/10 px-4 py-14 text-center md:px-6">
+      <div className="relative overflow-hidden border-b border-white/10 px-4 py-10 text-center sm:py-14 md:px-6">
         <div
           aria-hidden
           className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full"
@@ -28,21 +28,21 @@ export function SiteFooter({ company, legal, insuranceNote }: FooterProps) {
           alt=""
           width={88}
           height={88}
-          className="relative mx-auto mb-5 h-[88px] w-[88px]"
+          className="relative mx-auto mb-4 h-16 w-16 sm:mb-5 sm:h-[88px] sm:w-[88px]"
           unoptimized
           aria-hidden
         />
-        <p className="relative font-[family-name:var(--font-assistant)] text-2xl tracking-[0.18em]">
+        <p className="relative font-[family-name:var(--font-assistant)] text-lg tracking-[0.12em] sm:text-2xl sm:tracking-[0.18em]">
           <span className="font-bold">CUBE</span>{" "}
           <span className="font-light text-white/75">FINANCIAL GROUP</span>
         </p>
-        <p className="relative mt-3 text-lg font-medium text-cube-gold">
+        <p className="relative mt-2 text-base font-medium text-cube-gold sm:mt-3 sm:text-lg">
           {brand.tagline}
         </p>
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 py-14 md:px-6">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14 md:px-6">
+        <div className="grid gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <h3 className="mb-4 text-sm font-semibold text-cube-gold">פתרונות</h3>
             <ul className="space-y-2 text-sm text-white/80">

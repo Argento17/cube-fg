@@ -8,31 +8,29 @@ type BrandLockupProps = {
   className?: string;
 };
 
-const iconSize = (compact: boolean) => (compact ? 60 : 80);
-
 const wordmarkClass = (compact: boolean) =>
   compact
-    ? "text-[14px] tracking-[0.16em] md:text-[15px]"
-    : "text-[15px] tracking-[0.17em] sm:text-[16px] md:text-[18px] md:tracking-[0.18em] lg:text-[19px]";
+    ? "text-[12px] tracking-[0.14em] sm:text-[13px] sm:tracking-[0.15em] md:text-[15px]"
+    : "text-[13px] tracking-[0.15em] sm:text-[15px] sm:tracking-[0.17em] md:text-[18px] md:tracking-[0.18em] lg:text-[19px]";
 
 export function BrandLockup({
   variant = "icon-wordmark",
   compact = false,
   className = "",
 }: BrandLockupProps) {
-  const size = iconSize(compact);
   const wordmark = wordmarkClass(compact);
+  const iconClass = compact
+    ? "h-11 w-11 sm:h-[52px] sm:w-[52px] md:h-[60px] md:w-[60px]"
+    : "h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20";
 
   const iconEl = (
     <span className="flex shrink-0 items-center justify-center self-center">
       <Image
         src={brand.logos.cube}
         alt=""
-        width={size}
-        height={size}
-        className={`object-contain transition-transform duration-300 group-hover:scale-[1.02] ${
-          compact ? "h-[60px] w-[60px]" : "h-[68px] w-[68px] sm:h-[72px] sm:w-[72px] md:h-20 md:w-20"
-        }`}
+        width={80}
+        height={80}
+        className={`object-contain transition-transform duration-300 group-hover:scale-[1.02] ${iconClass}`}
         priority
         unoptimized
         aria-hidden
@@ -73,7 +71,7 @@ export function BrandLockup({
   return (
     <Link
       href="/"
-      className={`group flex min-w-0 items-center gap-2.5 md:gap-3.5 ${className}`}
+      className={`group flex min-w-0 items-center gap-2 sm:gap-2.5 md:gap-3.5 ${className}`}
       aria-label={`${brand.name} — דף הבית`}
     >
       {iconEl}

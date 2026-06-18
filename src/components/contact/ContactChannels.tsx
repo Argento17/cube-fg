@@ -92,7 +92,7 @@ function ChannelRow({
   );
 
   const className =
-    "group flex items-center gap-4 rounded-sm border border-transparent p-3 transition-all hover:border-cube-navy/10 hover:bg-cube-neutral/80";
+    "group flex min-h-[3.25rem] items-center gap-3 rounded-sm border border-transparent p-3 transition-all hover:border-cube-navy/10 hover:bg-cube-neutral/80 sm:gap-4";
 
   if (!href) {
     return <div className={className}>{inner}</div>;

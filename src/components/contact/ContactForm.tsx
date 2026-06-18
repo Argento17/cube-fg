@@ -12,7 +12,7 @@ type Labels = {
 };
 
 const inputClass =
-  "w-full rounded-sm border border-cube-navy/20 bg-white px-3 py-2.5 text-cube-navy focus:border-cube-gold focus:outline-none focus:ring-1 focus:ring-cube-gold";
+  "w-full min-h-11 rounded-sm border border-cube-navy/20 bg-white px-3 py-3 text-base text-cube-navy focus:border-cube-gold focus:outline-none focus:ring-1 focus:ring-cube-gold sm:py-2.5 sm:text-sm";
 
 export function ContactForm({ labels }: { labels: Labels }) {
   const [sent, setSent] = useState(false);

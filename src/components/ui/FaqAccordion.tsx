@@ -11,7 +11,7 @@ export function FaqAccordion({ items }: { items: { q: string; a: string }[] }) {
         <div key={item.q}>
           <button
             type="button"
-            className="flex w-full items-center justify-between px-4 py-4 text-start font-semibold text-cube-navy hover:bg-cube-neutral/50"
+            className="flex min-h-12 w-full items-center justify-between gap-3 px-4 py-4 text-start text-sm font-semibold text-cube-navy hover:bg-cube-neutral/50 sm:text-base"
             aria-expanded={openIndex === index}
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
           >

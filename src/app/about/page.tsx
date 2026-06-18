@@ -20,14 +20,14 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-cube-neutral py-16 md:py-24">
+      <section className="bg-cube-neutral py-12 sm:py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <h1 className="text-4xl font-bold text-cube-navy">{content.hero.headline}</h1>
-          <p className="mt-4 text-xl text-cube-sapphire">{content.hero.subheadline}</p>
+          <h1 className="text-3xl font-bold text-cube-navy sm:text-4xl">{content.hero.headline}</h1>
+          <p className="mt-3 text-lg text-cube-sapphire sm:mt-4 sm:text-xl">{content.hero.subheadline}</p>
         </div>
       </section>
 
-      <section className="py-14 md:py-20">
+      <section className="py-10 sm:py-14 md:py-20">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-2xl font-bold text-cube-navy">{content.story.title}</h2>
@@ -50,13 +50,13 @@ export default function AboutPage() {
             </ul>
           </div>
 
-          <div className="mt-12 grid items-start gap-8 rounded-sm border border-cube-navy/10 bg-cube-neutral p-6 md:grid-cols-12 md:gap-10 md:p-8">
-            <div className="md:col-span-7">
+          <div className="mt-10 grid items-start gap-6 rounded-sm border border-cube-navy/10 bg-cube-neutral p-5 sm:mt-12 sm:gap-8 sm:p-6 md:grid-cols-12 md:gap-10 md:p-8">
+            <div className="order-2 md:order-none md:col-span-7">
               <h2 className="text-xl font-bold text-cube-navy">{content.founder.name}</h2>
               <p className="text-cube-sapphire">{content.founder.title}</p>
               <p className="mt-4 leading-relaxed text-cube-body">{content.founder.bio}</p>
             </div>
-            <div className="md:col-span-5">
+            <div className="order-1 mx-auto w-full max-w-sm md:order-none md:col-span-5 md:mx-0">
               <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-sm border border-cube-navy/10">
                 <Image
                   src={content.founder.photo}
@@ -76,7 +76,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mx-auto mt-10 max-w-3xl">
-            <Button href="/meeting" variant="primary">
+            <Button href="/meeting" variant="primary" className="w-full sm:w-auto">
               לתיאום פגישת ייעוץ
             </Button>
           </div>

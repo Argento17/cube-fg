@@ -22,19 +22,19 @@ export const metadata: Metadata = {
 export default function MeetingPage() {
   return (
     <>
-      <section className="bg-cube-neutral py-12 md:py-16">
+      <section className="bg-cube-neutral py-10 sm:py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <h1 className="text-3xl font-bold text-cube-navy md:text-4xl">{content.title}</h1>
-          <p className="mt-2 text-cube-body">{content.subtitle}</p>
+          <h1 className="text-2xl font-bold text-cube-navy sm:text-3xl md:text-4xl">{content.title}</h1>
+          <p className="mt-2 text-sm text-cube-body sm:text-base">{content.subtitle}</p>
         </div>
       </section>
 
-      <section className="pb-20">
-        <div className="mx-auto grid max-w-6xl gap-12 px-4 md:grid-cols-2 md:px-6">
-          <div>
+      <section className="pb-12 sm:pb-20">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 md:grid-cols-2 md:gap-12 md:px-6">
+          <div className="rounded-sm border border-cube-navy/10 bg-white p-5 sm:p-6 md:border-0 md:bg-transparent md:p-0">
             <MeetingForm content={{ form: content.form }} />
           </div>
-          <aside className="rounded-sm border border-cube-navy/10 bg-cube-neutral p-6 md:p-8">
+          <aside className="rounded-sm border border-cube-navy/10 bg-cube-neutral p-5 sm:p-6 md:p-8">
             <div className="relative mb-6 h-28 w-28 overflow-hidden rounded-full border border-cube-navy/15 shadow-sm md:h-32 md:w-32">
               <Image
                 src={content.advisor.photo}
