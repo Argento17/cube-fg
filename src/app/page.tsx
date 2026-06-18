@@ -14,7 +14,7 @@ export default function HomePage() {
     tagline: string;
     primaryCta: { label: string; href: string };
     secondaryCta: { label: string; href: string };
-    video: { src: string; poster: string };
+    video: { src: string; mobileSrc?: string; poster?: string };
   }>("hero");
 
   const solutionsShowcase = getHomepageSection<{
