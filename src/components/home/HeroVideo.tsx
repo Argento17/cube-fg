@@ -10,8 +10,7 @@ type HeroContent = {
 };
 
 /**
- * Hero background video — CSS handles mobile / reduced-motion fallbacks.
- * No JS play/pause gating (that was hiding the video behind a solid overlay).
+ * Hero background video — gradient fallback only when reduced motion is preferred.
  */
 export function HeroVideo({ content }: { content: HeroContent }) {
   const posterUrl =
@@ -22,14 +21,14 @@ export function HeroVideo({ content }: { content: HeroContent }) {
   return (
     <section className="relative flex min-h-[72vh] items-center overflow-hidden sm:min-h-[80vh] md:min-h-[85vh]">
       <div className="absolute inset-0 bg-cube-navy" aria-hidden>
-        {/* Navy fallback: mobile + reduced motion (hidden on desktop when motion OK) */}
+        {/* Static fallback when reduced motion is preferred */}
         <div
-          className="absolute inset-0 bg-gradient-to-br from-cube-navy via-cube-sapphire/80 to-cube-navy md:motion-safe:opacity-0"
+          className="absolute inset-0 bg-gradient-to-br from-cube-navy via-cube-sapphire/80 to-cube-navy motion-safe:opacity-0"
           aria-hidden
         />
 
         <video
-          className="absolute inset-0 h-full w-full object-cover max-md:hidden motion-reduce:hidden"
+          className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
           autoPlay
           muted
           loop
