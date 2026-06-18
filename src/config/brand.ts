@@ -18,6 +18,7 @@ export const brand = {
     iconAspect: 1,
     full: "/brand/logo-full.png",
     cube: "/brand/logo-cube.svg",
+    cubeReversed: "/brand/logo-cube-reversed.svg",
   },
 } as const;
 

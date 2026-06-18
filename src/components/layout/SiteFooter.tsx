@@ -24,7 +24,7 @@ export function SiteFooter({ company, legal, insuranceNote }: FooterProps) {
           }}
         />
         <Image
-          src={brand.logos.cube}
+          src={brand.logos.cubeReversed}
           alt=""
           width={88}
           height={88}
