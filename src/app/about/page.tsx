@@ -112,13 +112,14 @@ export default function AboutPage() {
 
           <div className="mt-12 grid items-start gap-6 rounded-sm border border-cube-navy/10 bg-cube-neutral p-5 sm:mt-16 sm:gap-8 sm:p-6 md:grid-cols-12 md:gap-10 md:p-8">
             <div className="order-1 mx-auto w-full max-w-sm md:order-none md:col-span-4 md:mx-0 md:sticky md:top-28">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-cube-navy/10">
+              <div className="relative aspect-[2/3] w-full overflow-hidden rounded-sm border border-cube-navy/10">
                 <Image
                   src={founder.photo}
                   alt={founder.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, 320px"
+                  priority
                 />
                 <div className="absolute bottom-0 start-0 h-1 w-16 bg-cube-gold" aria-hidden />
               </div>
