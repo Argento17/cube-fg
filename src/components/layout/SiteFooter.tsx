@@ -112,13 +112,19 @@ export function SiteFooter({ company, legal, insuranceNote }: FooterProps) {
           {insuranceNote}
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-4 text-xs text-white/50">
+        <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-white/70">
           {legal.map((link) => (
-            <Link key={link.label} href={link.href} className="hover:text-white/80">
+            <Link
+              key={link.label}
+              href={link.href}
+              className="inline-flex min-h-11 items-center underline-offset-4 hover:text-white hover:underline"
+            >
               {link.label}
             </Link>
           ))}
-          <span>© {new Date().getFullYear()} Cube Financial Group</span>
+          <span className="text-xs text-white/50">
+            © {new Date().getFullYear()} Cube Financial Group
+          </span>
         </div>
       </div>
     </footer>
