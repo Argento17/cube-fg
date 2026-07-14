@@ -10,8 +10,8 @@ type BrandLockupProps = {
 
 const wordmarkClass = (compact: boolean) =>
   compact
-    ? "text-[13px] tracking-[0.12em] sm:text-[14px] sm:tracking-[0.14em] md:text-[16px]"
-    : "text-[14px] tracking-[0.12em] sm:text-[16px] sm:tracking-[0.14em] md:text-[18px] md:tracking-[0.16em] lg:text-[20px]";
+    ? "text-[11px] tracking-[0.1em] sm:text-[14px] sm:tracking-[0.14em] md:text-[16px]"
+    : "text-[12px] tracking-[0.1em] sm:text-[16px] sm:tracking-[0.14em] md:text-[18px] md:tracking-[0.16em] lg:text-[20px]";
 
 export function BrandLockup({
   variant = "icon-wordmark",
@@ -20,8 +20,8 @@ export function BrandLockup({
 }: BrandLockupProps) {
   const wordmark = wordmarkClass(compact);
   const iconClass = compact
-    ? "h-14 w-14 sm:h-16 sm:w-16 md:h-[4.5rem] md:w-[4.5rem]"
-    : "h-16 w-16 sm:h-[4.75rem] sm:w-[4.75rem] md:h-24 md:w-24 lg:h-[6.5rem] lg:w-[6.5rem]";
+    ? "h-11 w-11 sm:h-16 sm:w-16 md:h-[4.5rem] md:w-[4.5rem]"
+    : "h-12 w-12 sm:h-[4.75rem] sm:w-[4.75rem] md:h-24 md:w-24 lg:h-[6.5rem] lg:w-[6.5rem]";
 
   const iconEl = (
     <span className="flex shrink-0 items-center justify-center self-center">
@@ -74,7 +74,7 @@ export function BrandLockup({
   return (
     <Link
       href="/"
-      className={`group flex min-w-0 items-center gap-2.5 sm:gap-3 md:gap-4 ${className}`}
+      className={`group flex min-w-0 max-w-full items-center gap-2 sm:gap-3 md:gap-4 ${className}`}
       aria-label={`${brand.name} — דף הבית`}
     >
       {iconEl}
@@ -84,7 +84,7 @@ export function BrandLockup({
         <span className="block whitespace-nowrap font-[family-name:var(--font-assistant)] font-extrabold">
           CUBE
         </span>
-        <span className="mt-0.5 block whitespace-nowrap font-[family-name:var(--font-assistant)] font-medium tracking-[0.18em] text-cube-gold sm:tracking-[0.2em]">
+        <span className="mt-0.5 block whitespace-nowrap font-[family-name:var(--font-assistant)] font-medium tracking-[0.12em] text-cube-gold sm:tracking-[0.2em]">
           FINANCIAL GROUP
         </span>
       </p>

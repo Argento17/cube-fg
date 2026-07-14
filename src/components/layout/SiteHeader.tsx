@@ -94,14 +94,9 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
       } relative`}
     >
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 sm:gap-4 md:gap-6 md:px-6">
-        {/* Brand first on the RTL start (right) */}
-        <div className="shrink-0">
-          <BrandLockup
-            variant="icon-wordmark"
-            compact={scrolled}
-            className="hidden sm:flex"
-          />
-          <BrandLockup variant="icon-only" compact={scrolled} className="sm:hidden" />
+        {/* Brand first on the RTL start (right) — always show cube + wordmark */}
+        <div className="min-w-0 shrink">
+          <BrandLockup variant="icon-wordmark" compact={scrolled} />
         </div>
 
         <nav
