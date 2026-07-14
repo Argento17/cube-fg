@@ -11,14 +11,17 @@ export const brand = {
     body: "#2D3748",
   },
   logos: {
+    /** Full stacked lockup (cube + wordmark) */
+    full: "/brand/logo-full.png",
     horizontal: "/brand/logo-horizontal.png",
+    /** Cube mark only */
     icon: "/brand/logo-icon.png",
     icon2x: "/brand/logo-icon@2x.png",
     /** width / height of logo-icon.png (preserve aspect in header) */
     iconAspect: 1,
-    full: "/brand/logo-full.png",
-    cube: "/brand/logo-cube.svg",
-    cubeReversed: "/brand/logo-cube-reversed.svg",
+    cube: "/brand/logo-cube.png",
+    /** Same mark — legible on navy footer */
+    cubeReversed: "/brand/logo-cube-reversed.png",
   },
 } as const;
 
