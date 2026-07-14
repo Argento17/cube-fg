@@ -36,11 +36,11 @@ export function FourDimensions({
 
         <div className="mt-7 flex flex-col items-center gap-3">
           <Image
-            src={brand.logos.cube}
+            src={brand.logos.icon2x}
             alt=""
-            width={72}
-            height={72}
-            className="h-[72px] w-[72px]"
+            width={160}
+            height={160}
+            className="h-28 w-28 sm:h-32 sm:w-32"
             unoptimized
             aria-hidden
           />

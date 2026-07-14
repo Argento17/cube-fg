@@ -24,11 +24,11 @@ export function SiteFooter({ company, legal, insuranceNote }: FooterProps) {
           }}
         />
         <Image
-          src={brand.logos.cube}
+          src={brand.logos.icon2x}
           alt=""
-          width={88}
-          height={88}
-          className="relative mx-auto mb-4 h-16 w-16 sm:mb-5 sm:h-[88px] sm:w-[88px]"
+          width={160}
+          height={160}
+          className="relative mx-auto mb-4 h-24 w-24 sm:mb-5 sm:h-28 sm:w-28"
           unoptimized
           aria-hidden
         />

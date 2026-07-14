@@ -14,7 +14,7 @@ type SiteHeaderProps = {
 const CONTACT_HREF = "/contact";
 
 const navLinkClass =
-  "font-[family-name:var(--font-assistant)] text-[15px] font-semibold tracking-wide text-cube-navy transition-colors hover:text-cube-sapphire md:text-base";
+  "relative font-[family-name:var(--font-assistant)] text-[15px] font-semibold tracking-wide text-cube-navy transition-colors after:absolute after:inset-x-0 after:-bottom-1 after:h-0.5 after:origin-center after:scale-x-0 after:bg-cube-gold after:transition-transform after:duration-200 hover:text-cube-sapphire hover:after:scale-x-100 md:text-base";
 
 function NavItems({
   items,
@@ -32,11 +32,11 @@ function NavItems({
           <div key={item.href} className={`group relative ${className ?? ""}`}>
             <Link href={item.href} className={navLinkClass} onClick={onNavigate}>
               {item.label}
-              <span className="ms-0.5 text-cube-navy/50" aria-hidden>
+              <span className="ms-1 inline-block text-[10px] text-cube-gold" aria-hidden>
                 ▾
               </span>
             </Link>
-            <div className="invisible absolute start-0 top-full z-50 mt-1 min-w-[240px] rounded-sm border border-cube-navy/10 bg-white py-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:opacity-100">
+            <div className="invisible absolute start-0 top-full z-50 mt-2 min-w-[240px] rounded-sm border border-cube-navy/10 bg-white py-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:opacity-100">
               {item.children.map((child) => (
                 <Link
                   key={child.href}
@@ -89,23 +89,40 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
     <header
       className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "border-cube-navy/15 bg-cube-neutral/98 py-2 shadow-sm backdrop-blur-md"
-          : "border-cube-navy/10 bg-cube-neutral/95 py-2.5 backdrop-blur-md sm:py-3 md:py-4"
+          ? "border-cube-gold/40 bg-cube-neutral/98 py-2 shadow-sm backdrop-blur-md"
+          : "border-cube-navy/10 bg-cube-neutral/95 py-3 backdrop-blur-md sm:py-3.5 md:py-4"
       } relative`}
     >
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 sm:gap-4 md:gap-6 md:px-6">
-        <div className="flex shrink-0 items-center gap-2 sm:gap-3 md:gap-4">
+        {/* Brand first on the RTL start (right) */}
+        <div className="shrink-0">
+          <BrandLockup
+            variant="icon-wordmark"
+            compact={scrolled}
+            className="hidden sm:flex"
+          />
+          <BrandLockup variant="icon-only" compact={scrolled} className="sm:hidden" />
+        </div>
+
+        <nav
+          className="hidden flex-1 items-center justify-center gap-6 lg:flex xl:gap-8"
+          aria-label="ניווט ראשי"
+        >
+          <NavItems items={mainNav} />
+        </nav>
+
+        <div className="ms-auto flex shrink-0 items-center gap-2 sm:gap-3 md:gap-4">
           {contactItem && (
             <Link
               href={contactItem.href}
-              className="hidden font-[family-name:var(--font-assistant)] text-[15px] font-semibold text-cube-navy/90 transition-colors hover:text-cube-navy md:inline-block md:text-base"
+              className="hidden font-[family-name:var(--font-assistant)] text-[15px] font-semibold text-cube-navy/80 transition-colors hover:text-cube-navy md:inline-block md:text-base"
             >
               {contactItem.label}
             </Link>
           )}
           <Button
             href={cta.href}
-            variant="outlineGold"
+            variant="primary"
             className="hidden font-[family-name:var(--font-assistant)] text-[15px] font-bold tracking-wide sm:inline-flex md:text-base"
           >
             {cta.label}
@@ -142,22 +159,6 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
             </svg>
           </button>
         </div>
-
-        <nav
-          className="hidden flex-1 items-center justify-center gap-6 lg:flex xl:gap-8"
-          aria-label="ניווט ראשי"
-        >
-          <NavItems items={mainNav} />
-        </nav>
-
-        <div className="ms-auto min-w-0 shrink lg:min-w-[280px] xl:min-w-[320px]">
-          <BrandLockup
-            variant="icon-wordmark"
-            compact={scrolled}
-            className="hidden sm:flex"
-          />
-          <BrandLockup variant="icon-only" compact className="sm:hidden" />
-        </div>
       </div>
 
       {open && (
@@ -188,7 +189,7 @@ export function SiteHeader({ nav, cta }: SiteHeaderProps) {
               </div>
             ))}
             <div className="mt-4 flex flex-col gap-3 border-t border-cube-navy/10 pt-4">
-              <Button href={cta.href} variant="outlineGold" className="w-full">
+              <Button href={cta.href} variant="primary" className="w-full">
                 {cta.label}
               </Button>
               {contactItem && (

@@ -8,18 +8,35 @@ type BrandLockupProps = {
   className?: string;
 };
 
+const wordmarkClass = (compact: boolean) =>
+  compact
+    ? "text-[13px] tracking-[0.12em] sm:text-[14px] sm:tracking-[0.14em] md:text-[16px]"
+    : "text-[14px] tracking-[0.12em] sm:text-[16px] sm:tracking-[0.14em] md:text-[18px] md:tracking-[0.16em] lg:text-[20px]";
+
 export function BrandLockup({
   variant = "icon-wordmark",
   compact = false,
   className = "",
 }: BrandLockupProps) {
+  const wordmark = wordmarkClass(compact);
   const iconClass = compact
-    ? "h-11 w-11 sm:h-[52px] sm:w-[52px] md:h-[60px] md:w-[60px]"
-    : "h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20";
+    ? "h-14 w-14 sm:h-16 sm:w-16 md:h-[4.5rem] md:w-[4.5rem]"
+    : "h-16 w-16 sm:h-[4.75rem] sm:w-[4.75rem] md:h-24 md:w-24 lg:h-[6.5rem] lg:w-[6.5rem]";
 
-  const lockupClass = compact
-    ? "h-12 w-auto sm:h-14 md:h-16"
-    : "h-14 w-auto sm:h-16 md:h-[4.5rem]";
+  const iconEl = (
+    <span className="flex shrink-0 items-center justify-center self-center">
+      <Image
+        src={brand.logos.icon2x}
+        alt=""
+        width={256}
+        height={256}
+        className={`object-contain transition-transform duration-300 group-hover:scale-[1.03] ${iconClass}`}
+        priority
+        unoptimized
+        aria-hidden
+      />
+    </span>
+  );
 
   if (variant === "icon-only") {
     return (
@@ -28,17 +45,28 @@ export function BrandLockup({
         className={`group inline-flex shrink-0 ${className}`}
         aria-label={`${brand.name} — דף הבית`}
       >
+        {iconEl}
+        <span className="sr-only">{brand.wordmark}</span>
+      </Link>
+    );
+  }
+
+  if (variant === "stacked") {
+    return (
+      <Link
+        href="/"
+        className={`group flex shrink-0 flex-col items-center gap-2 text-center ${className}`}
+        aria-label={`${brand.name} — דף הבית`}
+      >
         <Image
-          src={brand.logos.cube}
-          alt=""
-          width={80}
-          height={80}
-          className={`object-contain transition-transform duration-300 group-hover:scale-[1.02] ${iconClass}`}
+          src={brand.logos.full}
+          alt={brand.wordmark}
+          width={435}
+          height={512}
+          className="h-36 w-auto object-contain sm:h-44"
           priority
           unoptimized
-          aria-hidden
         />
-        <span className="sr-only">{brand.wordmark}</span>
       </Link>
     );
   }
@@ -46,18 +74,20 @@ export function BrandLockup({
   return (
     <Link
       href="/"
-      className={`group inline-flex shrink-0 items-center ${className}`}
+      className={`group flex min-w-0 items-center gap-2.5 sm:gap-3 md:gap-4 ${className}`}
       aria-label={`${brand.name} — דף הבית`}
     >
-      <Image
-        src={brand.logos.full}
-        alt={brand.wordmark}
-        width={218}
-        height={256}
-        className={`object-contain object-center transition-transform duration-300 group-hover:scale-[1.02] ${lockupClass}`}
-        priority
-        unoptimized
-      />
+      {iconEl}
+      <p
+        className={`flex min-w-0 flex-col items-start justify-center leading-[1.05] text-cube-navy ${wordmark}`}
+      >
+        <span className="block whitespace-nowrap font-[family-name:var(--font-assistant)] font-extrabold">
+          CUBE
+        </span>
+        <span className="mt-0.5 block whitespace-nowrap font-[family-name:var(--font-assistant)] font-medium tracking-[0.18em] text-cube-gold sm:tracking-[0.2em]">
+          FINANCIAL GROUP
+        </span>
+      </p>
     </Link>
   );
 }
