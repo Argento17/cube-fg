@@ -24,10 +24,6 @@ const content = getAboutContent() as {
       institutional: { label: string; text: string };
       independent: { label: string; text: string };
     };
-    expertise: {
-      title: string;
-      items: { title: string; text: string }[];
-    };
     personal: {
       title: string;
       lines: string[];
@@ -158,20 +154,6 @@ export default function AboutPage() {
                   </span>
                   {founder.background.independent.text}
                 </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold text-cube-navy">
-                  {founder.expertise.title}
-                </h3>
-                <ul className="mt-3 space-y-3">
-                  {founder.expertise.items.map((item) => (
-                    <li key={item.title}>
-                      <p className="font-semibold text-cube-navy">{item.title}</p>
-                      <p className="mt-0.5 leading-relaxed text-cube-body">{item.text}</p>
-                    </li>
-                  ))}
-                </ul>
               </div>
 
               <div className="border-t border-cube-navy/10 pt-6">
