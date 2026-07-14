@@ -22,9 +22,9 @@
       { "label": "צור קשר", "href": "/contact" }
     ],
     "legal": [
-      { "label": "מדיניות פרטיות", "href": "#" },
-      { "label": "גילוי נאות", "href": "#" },
-      { "label": "הצהרת נגישות", "href": "#" }
+      { "label": "מדיניות פרטיות", "href": "/privacy" },
+      { "label": "גילוי נאות", "href": "/disclosure" },
+      { "label": "הצהרת נגישות", "href": "/accessibility" }
     ],
     "insuranceNote": "פתרונות ביטוח במסגרת בר חיים ביטוחים, חטיבת הביטוח של Cube Financial Group."
   }

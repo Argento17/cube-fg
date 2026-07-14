@@ -56,6 +56,20 @@ export function getAboutContent() {
   return readJson<Record<string, unknown>>("about.json");
 }
 
+export function getLegalContent(slug: "privacy" | "disclosure" | "accessibility") {
+  return readJson<{
+    title: string;
+    updated?: string;
+    seo: { title: string; description: string };
+    intro?: string;
+    sections: {
+      heading?: string;
+      paragraphs?: string[];
+      items?: string[];
+    }[];
+  }>(`${slug}.json`);
+}
+
 export function getProcessPageContent() {
   return readJson<Record<string, unknown>>("process-page.json");
 }
