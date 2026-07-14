@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 type FounderContent = {
-  eyebrow: string;
+  headline: string;
   name: string;
   title: string;
   photo: string;
@@ -10,7 +11,6 @@ type FounderContent = {
   background: string[];
   highlights: string[];
   philosophy: string;
-  insuranceNote?: string;
   ctas: { about: { label: string; href: string }; meeting: { label: string; href: string } };
 };
 
@@ -34,9 +34,17 @@ export function FounderSection({ content }: { content: FounderContent }) {
           </div>
 
           <div className="lg:col-span-7">
-            <p className="mb-2 text-sm font-medium text-cube-gold">{content.eyebrow}</p>
-            <h2 className="text-2xl font-bold text-cube-navy sm:text-3xl md:text-4xl">{content.name}</h2>
-            <p className="mt-1 text-lg text-cube-sapphire">{content.title}</p>
+            <Link href={content.ctas.about.href} className="group inline-block">
+              <h2 className="text-2xl font-extrabold leading-tight text-cube-navy transition-colors group-hover:text-cube-sapphire sm:text-3xl md:text-4xl">
+                נעים מאוד, אנחנו{" "}
+                <span>
+                  CUBE
+                  <span className="text-cube-gold">.</span>
+                </span>
+              </h2>
+            </Link>
+            <p className="mt-3 text-lg font-semibold text-cube-navy">{content.name}</p>
+            <p className="mt-0.5 text-base text-cube-sapphire">{content.title}</p>
 
             <p className="mt-6 leading-relaxed text-cube-body">{content.story}</p>
 
@@ -63,10 +71,6 @@ export function FounderSection({ content }: { content: FounderContent }) {
             <blockquote className="mt-8 border-s-4 border-cube-gold ps-4 text-lg italic text-cube-navy">
               {content.philosophy}
             </blockquote>
-
-            {content.insuranceNote && (
-              <p className="mt-4 text-sm text-cube-body/80">{content.insuranceNote}</p>
-            )}
 
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
               <Button href={content.ctas.about.href} variant="secondary" className="w-full sm:w-auto">

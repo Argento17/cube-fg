@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Assistant, Heebo } from "next/font/google";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { getNavigation, getSite } from "@/lib/content/loaders";
 import "./globals.css";
 
@@ -52,6 +53,7 @@ export default function RootLayout({
           legal={navigation.footer.legal}
           insuranceNote={navigation.footer.insuranceNote}
         />
+        <WhatsAppFloat href={site.contact.whatsapp} />
       </body>
     </html>
   );
