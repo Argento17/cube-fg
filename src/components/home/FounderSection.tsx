@@ -7,10 +7,8 @@ type FounderContent = {
   name: string;
   title: string;
   photo: string;
-  story: string;
-  background: string[];
-  highlights: string[];
-  philosophy: string;
+  paragraphs: string[];
+  arms: { title: string; subtitle: string; text: string }[];
   ctas: { about: { label: string; href: string }; meeting: { label: string; href: string } };
 };
 
@@ -39,40 +37,41 @@ export function FounderSection({ content }: { content: FounderContent }) {
 
           <div className="lg:col-span-7">
             <Link href={content.ctas.about.href} className="group inline-block">
-              <h2 className="text-2xl font-extrabold leading-tight text-cube-navy transition-colors group-hover:text-cube-sapphire sm:text-3xl md:text-4xl">
+              <h2 className="font-[family-name:var(--font-assistant)] text-2xl font-extrabold leading-tight text-cube-navy transition-colors group-hover:text-cube-sapphire sm:text-3xl md:text-4xl">
                 נעים מאוד, אנחנו{" "}
-                <span>
-                  CUBE
+                <span className="whitespace-nowrap">
+                  CUBE FINANCIAL GROUP
                   <span className="text-cube-gold">.</span>
                 </span>
               </h2>
             </Link>
 
-            <p className="mt-6 leading-relaxed text-cube-body">{content.story}</p>
+            {content.paragraphs.map((p) => (
+              <p
+                key={p.slice(0, 32)}
+                className="mt-4 text-base leading-relaxed text-cube-body first:mt-6 sm:text-[17px]"
+              >
+                {p}
+              </p>
+            ))}
 
-            <ul className="mt-6 space-y-2 text-cube-body">
-              {content.background.map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="text-cube-gold">—</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-6 flex flex-wrap gap-2">
-              {content.highlights.map((chip) => (
-                <span
-                  key={chip}
-                  className="rounded-sm border border-cube-navy/15 bg-white px-3 py-1 text-sm text-cube-navy"
-                >
-                  {chip}
-                </span>
+            <div className="mt-8 space-y-5 border-t border-cube-navy/10 pt-6">
+              {content.arms.map((arm) => (
+                <div key={arm.title}>
+                  <h3 className="text-base font-bold text-cube-navy sm:text-lg">
+                    {arm.title}
+                  </h3>
+                  {arm.subtitle ? (
+                    <p className="mt-0.5 text-sm font-semibold text-cube-sapphire">
+                      {arm.subtitle}
+                    </p>
+                  ) : null}
+                  <p className="mt-1.5 text-sm leading-relaxed text-cube-body sm:text-[15px]">
+                    {arm.text}
+                  </p>
+                </div>
               ))}
             </div>
-
-            <blockquote className="mt-8 border-s-4 border-cube-gold ps-4 text-lg italic text-cube-navy">
-              {content.philosophy}
-            </blockquote>
 
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
               <Button href={content.ctas.about.href} variant="secondary" className="w-full sm:w-auto">

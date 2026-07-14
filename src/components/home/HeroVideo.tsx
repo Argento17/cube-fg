@@ -90,12 +90,16 @@ export function HeroVideo({ content }: { content: HeroContent }) {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-16 sm:py-20 md:px-6 md:py-24">
         <div className="max-w-2xl">
-          <h1 className="text-[1.75rem] font-bold leading-tight text-white sm:text-3xl md:text-5xl">
+          <h1 className="font-[family-name:var(--font-assistant)] text-[1.85rem] font-extrabold leading-[1.2] tracking-tight text-white sm:text-4xl md:text-5xl">
             {content.headline}
           </h1>
           <div className="mt-4 h-0.5 w-16 bg-cube-gold" />
-          <p className="mt-5 text-base font-medium text-white sm:mt-6 sm:text-lg">{content.brand}</p>
-          <p className="mt-1 text-sm text-white/80 sm:text-base">{content.tagline}</p>
+          <p className="mt-5 font-[family-name:var(--font-assistant)] text-lg font-bold tracking-wide text-white sm:mt-6 sm:text-xl md:text-2xl">
+            {content.brand}
+          </p>
+          <p className="mt-3 font-[family-name:var(--font-assistant)] text-base font-semibold tracking-[0.12em] text-cube-gold sm:text-lg md:text-xl md:tracking-[0.16em]">
+            {content.tagline}
+          </p>
           <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
             <Button href={content.primaryCta.href} variant="primary" className="w-full sm:w-auto">
               {content.primaryCta.label}
