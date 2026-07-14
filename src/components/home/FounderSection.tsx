@@ -31,6 +31,10 @@ export function FounderSection({ content }: { content: FounderContent }) {
               />
               <div className="absolute bottom-0 start-0 h-1 w-16 bg-cube-gold" aria-hidden />
             </div>
+            <p className="mt-4 text-lg font-semibold text-cube-navy sm:text-xl">
+              {content.name}
+            </p>
+            <p className="mt-0.5 text-base text-cube-sapphire">{content.title}</p>
           </div>
 
           <div className="lg:col-span-7">
@@ -43,8 +47,6 @@ export function FounderSection({ content }: { content: FounderContent }) {
                 </span>
               </h2>
             </Link>
-            <p className="mt-3 text-lg font-semibold text-cube-navy">{content.name}</p>
-            <p className="mt-0.5 text-base text-cube-sapphire">{content.title}</p>
 
             <p className="mt-6 leading-relaxed text-cube-body">{content.story}</p>
 
